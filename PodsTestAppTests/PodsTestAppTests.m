@@ -7,14 +7,17 @@
 //
 
 #import "PodsTestAppTests.h"
+#import <GoogleAnalytics-iOS-SDK/GAI.h>
+#import <AFNetworking/AFNetworking.h>
 
 @implementation PodsTestAppTests
 
 - (void)setUp
 {
     [super setUp];
-    
     // Set-up code here.
+    [GAI sharedInstance].optOut = YES;
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = NO;
 }
 
 - (void)tearDown

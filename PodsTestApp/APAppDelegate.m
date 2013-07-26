@@ -7,6 +7,7 @@
 //
 
 #import "APAppDelegate.h"
+#import <GoogleAnalytics-iOS-SDK/GAI.h>
 
 @implementation APAppDelegate
 
@@ -16,6 +17,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[GAI sharedInstance] trackerWithTrackingId:@"trackingId"];
     return YES;
 }
 
